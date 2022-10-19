@@ -1,0 +1,26 @@
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--clr-bg-card);
+    border: .2rem solid var(--clr-brd-card);
+    border-radius: 1rem;
+
+    box-shadow: -.3rem .3rem 1rem rgba(0, 0, 0, 0.3);
+
+    margin: 1.5rem;
+    height: 15rem;
+    width: 12rem;
+
+    cursor: pointer;
+
+    transform-style: preserve-3d;
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-1.5rem);
+    box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+}

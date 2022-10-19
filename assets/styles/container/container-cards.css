@@ -2,8 +2,10 @@
 .container__cards{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-wrap: wrap;
 
-    max-width: 102rem;
+    perspective: 100rem;
+
+    max-width: 105rem;
 }
