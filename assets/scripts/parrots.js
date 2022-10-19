@@ -1,12 +1,12 @@
 
 let parrots = [
-    {name: "bob-ross-parrot", image: "../img/bob_ross_parrot.gif"},
-    {name: "explody-parrot", image: "../img/explody_parrot.gif"},
-    {name: "fiesta-parrot", image: "../img/fiesta_parrot.gif"},
-    {name: "metal-parrot", image: "../img/metal_parrot.gif"},
-    {name: "revert-it-parrot", image: "../img/revert_it_parrot.gif"},
-    {name: "triplets-parrot", image: "../img/triplets_parrot.gif"},
-    {name: "unicorn-parrot", image: "../img/unicorn_parrot.gif"},
+    {name: "bob-ross-parrot", image: "./assets/img/bob_ross_parrot.gif"},
+    {name: "explody-parrot", image: "./assets/img/explody_parrot.gif"},
+    {name: "fiesta-parrot", image: "./assets/img/fiesta_parrot.gif"},
+    {name: "metal-parrot", image: "./assets/img/metal_parrot.gif"},
+    {name: "revert-it-parrot", image: "./assets/img/revert_it_parrot.gif"},
+    {name: "triplets-parrot", image: "./assets/img/triplets_parrot.gif"},
+    {name: "unicorn-parrot", image: "./assets/img/unicorn_parrot.gif"},
 ];
 
 const generateRandomParrots = (size = numCards) => {

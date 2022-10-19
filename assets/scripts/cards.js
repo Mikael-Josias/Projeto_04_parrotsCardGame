@@ -7,14 +7,20 @@ const createCards = (cardValues, size = numCards) => {
 
     for (let i = 0; i < size; i++) {
         let card = document.createElement("div");
-        let cardParrot = document.createElement("img");
+        let cardBackParrot = document.createElement("img");
+        let cardValueParrot = document.createElement("img");
         
         card.classList.add("card");
         card.setAttribute("data-card-value", cardValues[i].name);
-        cardParrot.classList.add("card__parrot");
-        cardParrot.src = "./assets/img/green_parrot_emoji.png";
+        
+        cardBackParrot.classList.add("card__parrot--before");
+        cardBackParrot.src = "./assets/img/green_parrot_emoji.png";
 
-        card.appendChild(cardParrot);
+        cardValueParrot.classList.add("card__parrot--after");
+        cardValueParrot.src = cardValues[i].image;
+
+        card.appendChild(cardBackParrot);
+        card.appendChild(cardValueParrot);
         containerCards.appendChild(card);        
     }
 

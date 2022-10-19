@@ -1,4 +1,10 @@
 
-.card__parrot{
+.card__parrot--before, .card__parrot--after{
+    position: absolute;
+    backface-visibility: hidden;
     width: 8rem;
+}
+
+.card__parrot--after{
+    transform: rotateY(180deg)
 }
