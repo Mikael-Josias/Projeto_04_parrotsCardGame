@@ -1,0 +1,7 @@
+
+@media (max-width: 514px){
+
+    .container__cards{
+        flex-direction: column;
+    }
+}
