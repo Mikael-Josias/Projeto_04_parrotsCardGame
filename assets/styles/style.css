@@ -11,11 +11,21 @@
     --clr-bg: #EEF9BF;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 html{
     font-family: var(--font-family-primary);
     font-size: 10px;
+
+    height: 100%;
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+
     background-color: var(--clr-bg);
+    height: 100%;
 }
