@@ -12,4 +12,4 @@ while(numCards === 0){
     promptMsg = "O número de cartas deve ser par, entre 4 e 14:"
 }
 
-setCards(numCards);
+initializer();
