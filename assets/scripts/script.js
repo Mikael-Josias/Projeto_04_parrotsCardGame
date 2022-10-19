@@ -4,7 +4,6 @@ let numCards = 0;
 
 while(numCards === 0){
     let num = Number(prompt(promptMsg));
-
     if (num%2 === 0 && 4 <= num && num <= 14) {
 
         numCards = num;        
@@ -13,3 +12,4 @@ while(numCards === 0){
     promptMsg = "O número de cartas deve ser par, entre 4 e 14:"
 }
 
+setCards(numCards);
