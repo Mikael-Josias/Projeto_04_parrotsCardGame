@@ -8,13 +8,15 @@ while(numCards === 0){
     let num = Number(prompt(promptMsg));
     if (num%2 === 0 && 4 <= num && num <= 14) {
 
-        numCards = num;        
+        numCards = num;      
+        interval = setInterval(timeGenerator, 1000);
+        
+        initializer();
     }
 
     promptMsg = "O número de cartas deve ser par, entre 4 e 14:"
 }
 
-initializer();
 
 const cards = document.querySelectorAll(".card");
 
@@ -32,7 +34,6 @@ cards.forEach((card) => {
                 firstCardValue = card.getAttribute("data-card-value");
                 
             }else{
-                //moves ++
     
                 secondCard = card;
                 let secondCardValue = card.getAttribute("data-card-value");
@@ -67,6 +68,17 @@ const verifyWin = (size = numCards) => {
     let matchedCards = document.querySelectorAll(".matched");
 
     if (matchedCards.length === size) {
-        alert(`Você ganhou em ${moves} jogadas!`);
+        setTimeout(() => {
+            alert(`Você ganhou em ${moves} jogadas! Com um tempo de ${minutes < 10? "0" + minutes: minutes} minutos e ${seconds < 10? "0" + seconds: seconds} segundos!`);
+            let res = prompt(`Deseja jogar novamente? Digite "sim" ou "não" respectivamente.`);
+
+            if (res === "sim") {
+                
+            }else if (res === "não") {
+                clearInterval(interval)
+                return;
+            }
+
+        }, 1000);
     }
 }
