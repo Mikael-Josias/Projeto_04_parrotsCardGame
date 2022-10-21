@@ -1,6 +1,7 @@
 
+let containerCards = document.querySelector(".container__cards");
+
 const createCards = (cardValues, size = numCards) => {
-    let containerCards = document.querySelector(".container__cards");
 
     cardValues = [...cardValues, ...cardValues];
     cardValues.sort(() => Math.random() - 0.5);
