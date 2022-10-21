@@ -2,6 +2,7 @@
 let promptMsg = "Digite o número de cartas com que gostaria de jogar:";
 let numCards = 0;
 let firstCard = false, firstCardValue, secondCard;
+let moves = 0;
 
 while(numCards === 0){
     let num = Number(prompt(promptMsg));
@@ -24,6 +25,8 @@ cards.forEach((card) => {
             card.classList.remove("card")
             card.classList.add("card--flipped");
 
+            moves++;
+
             if (!firstCard) {
                 firstCard = card;
                 firstCardValue = card.getAttribute("data-card-value");
@@ -40,6 +43,8 @@ cards.forEach((card) => {
                     secondCard.classList.add("matched");
     
                     firstCard = false;
+
+                    verifyWin();
                 }else{
                     let [tempFirst, tempSecond] = [firstCard, secondCard];
                     firstCard = false;
@@ -57,3 +62,11 @@ cards.forEach((card) => {
         }
     })
 });
+
+const verifyWin = (size = numCards) => {
+    let matchedCards = document.querySelectorAll(".matched");
+
+    if (matchedCards.length === size) {
+        alert(`Você ganhou em ${moves} jogadas!`);
+    }
+}
