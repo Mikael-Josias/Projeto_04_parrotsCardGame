@@ -32,7 +32,7 @@ Parrot's Card Game é um jogo da memória divertido e temático, com efeitos de 
 
 <div align="center">  
 
-## 📱 Prévia Mobile 📱  
+## 📱 Prévia Desktop 📱  
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;" >
 
